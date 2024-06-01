@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from data_preprocessing import data_preprocessing, encoder_Application_mode, encoder_Course, encoder_Fathers_occupation, encoder_Fathers_qualification, encoder_Marital_status, encoder_Mothers_occupation, encoder_Mothers_qualification, encoder_Nacionality, encoder_Previous_qualification
-from prediction import prediction
+#from data_preprocessing import data_preprocessing, encoder_Application_mode, encoder_Course, encoder_Fathers_occupation, encoder_Fathers_qualification, encoder_Marital_status, encoder_Mothers_occupation, encoder_Mothers_qualification, encoder_Nacionality, encoder_Previous_qualification
+#from prediction import prediction
 
 col1 = st.columns([1, 5])
 with col1:
