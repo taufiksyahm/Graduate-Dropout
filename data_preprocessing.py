@@ -44,6 +44,5 @@ def data_preprocessing(data):
     df["Mothers_qualification"] = encoder_Mothers_qualification.transform(data["Mothers_qualification"])[0]
     df["Nacionality"] = encoder_Nacionality.transform(data["Nacionality"])[0]
     df["Previous_qualification"] = encoder_Previous_qualification.transform(data["Previous_qualification"])[0]
-    df["Status"] = encoder_target.transform(data["Status"])[0]
         
     return df
