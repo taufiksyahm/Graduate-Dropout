@@ -11,6 +11,7 @@ encoder_Mothers_occupation = joblib.load("model/encoder_Mothers_occupation.jobli
 encoder_Mothers_qualification = joblib.load("model/encoder_Mothers_qualification.joblib")
 encoder_Nacionality = joblib.load("model/encoder_Nacionality.joblib")
 encoder_Previous_qualification = joblib.load("model/encoder_Previous_qualification.joblib")
+encoder_target = joblib.load("model/encoder_target.joblib")
 scaler_Curricular_units_1st_sem_approved = joblib.load("model/scaler_Curricular_units_1st_sem_approved.joblib")
 scaler_Curricular_units_1st_sem_grade = joblib.load("model/scaler_Curricular_units_1st_sem_grade.joblib")
 scaler_Curricular_units_2nd_sem_approved = joblib.load("model/scaler_Curricular_units_2nd_sem_approved.joblib")
@@ -43,5 +44,6 @@ def data_preprocessing(data):
     df["Mothers_qualification"] = encoder_Mothers_qualification.transform(data["Mothers_qualification"])[0]
     df["Nacionality"] = encoder_Nacionality.transform(data["Nacionality"])[0]
     df["Previous_qualification"] = encoder_Previous_qualification.transform(data["Previous_qualification"])[0]
+    df["Status"] = encoder_target.transform(data["Status"])[0]
         
     return df
