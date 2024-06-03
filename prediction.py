@@ -12,6 +12,7 @@ def prediction(data):
     Returns:
         str: Prediction result (Graduate, Dropout)
     """
+    data = data[model.feature_names_in]
     result = model.predict(data)
     final_result = result_target.inverse_transform(result)[0]
     return final_result
