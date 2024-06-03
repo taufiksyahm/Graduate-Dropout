@@ -6,6 +6,7 @@ from prediction import prediction
 
 st.header('Graduate-Dropout App (Prototype)')
 data = pd.DataFrame()
+model = joblib.load("model/rdf_model.joblib")
      
 col1, col2, col3 = st.columns(3)
      
