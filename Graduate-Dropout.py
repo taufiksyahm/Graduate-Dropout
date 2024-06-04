@@ -76,6 +76,9 @@ with st.expander("View the Raw Data"):
 
 if st.button('Predict'):
     new_data = data_preprocessing(data=data)
+    st.write(set(data['Marital_status']))
+    st.write(set(encoder_Marital_status.classes_))
+    df["Marital_status"] = encoder_Marital_status.transform(data["Marital_status"])
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
     st.write("Status: {}".format(prediction(new_data)))
