@@ -31,6 +31,8 @@ def data_preprocessing(data):
 
     df["Application_mode"] = encoder_Application_mode.transform(data["Application_mode"])
     df["Course"] = encoder_Course.transform(data["Course"])
+    print(set(data['Marital_status']))
+    print(set(encoder_Marital_status.classes_))
     df["Marital_status"] = encoder_Marital_status.transform(data["Marital_status"])
     df["Nacionality"] = encoder_Nacionality.transform(data["Nacionality"])
     df["Previous_qualification"] = encoder_Previous_qualification.transform(data["Previous_qualification"])
